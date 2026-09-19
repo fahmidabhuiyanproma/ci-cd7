@@ -1,0 +1,25 @@
+name: Student Grade CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  test:
+    name: Run Grade Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install pytest
+        run: pip install pytest
+
+      - name: Run the tests
+        run: python -m pytest test_grade.py -v
