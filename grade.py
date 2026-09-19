@@ -1,5 +1,5 @@
 def calculate_total(mark1, mark2, mark3):
-    return mark1 + mark2 + mark3
+    return mark1 + mark2 + mark3 +1
 
 
 def calculate_average(mark1, mark2, mark3):
